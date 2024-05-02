@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pos.POSController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="main_form" layoutX="312.0" prefHeight="493.0" prefWidth="318.0" styleClass="right-form" stylesheets="@logindesign.css">
+               <children>
+                  <Label layoutX="94.0" layoutY="150.0" text="Admin Sign In !">
+                     <font>
+                        <Font name="Tahoma Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="admin_username" layoutX="58.0" layoutY="199.0" onAction="#loginAdmin" prefHeight="32.0" prefWidth="198.0" promptText="Username" styleClass="textfield" stylesheets="@logindesign.css" />
+                  <PasswordField fx:id="admin_password" layoutX="57.0" layoutY="247.0" onAction="#loginAdmin" prefHeight="32.0" prefWidth="198.0" promptText="Password" styleClass="textfield" stylesheets="@logindesign.css" />
+                  <Button fx:id="admin_loginbtn" layoutX="116.0" layoutY="296.0" mnemonicParsing="false" onAction="#loginAdmin" prefHeight="32.0" prefWidth="80.0" styleClass="login-btn" stylesheets="@logindesign.css" text="Login" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="124.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/user.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="close" layoutX="255.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="41.0" styleClass="close" stylesheets="@logindesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Hyperlink fx:id="admin_hyperlink" layoutX="70.0" layoutY="418.0" onAction="#switchForm" stylesheets="@logindesign.css" text="Login Employee Account?">
+                     <font>
+                        <Font name="Tahoma Bold" size="13.0" />
+                     </font>
+                  </Hyperlink>
+               </children></AnchorPane>
+            <AnchorPane layoutX="-6.0" prefHeight="493.0" prefWidth="318.0" styleClass="left-form" stylesheets="@logindesign.css">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="98.0" layoutX="107.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/point-of-service.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="77.0" layoutY="217.0" prefHeight="30.0" prefWidth="159.0" text="Point of Sale" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="266.0" text="System" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane fx:id="employee_form" layoutX="312.0" layoutY="10.0" prefHeight="493.0" prefWidth="318.0" styleClass="right-form" stylesheets="@logindesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="312.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="79.0" layoutY="151.0" text="Employee Sign In !">
+                     <font>
+                        <Font name="Tahoma Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="employee_id" layoutX="58.0" layoutY="199.0" onAction="#LoginEmployee" prefHeight="32.0" prefWidth="198.0" promptText="Employee ID" styleClass="textfield" stylesheets="@logindesign.css" />
+                  <PasswordField fx:id="employee_password" layoutX="57.0" layoutY="247.0" onAction="#LoginEmployee" prefHeight="32.0" prefWidth="198.0" promptText="Password" styleClass="textfield" stylesheets="@logindesign.css" />
+                  <Button fx:id="employee_loginbtn" layoutX="116.0" layoutY="296.0" mnemonicParsing="false" onAction="#LoginEmployee" prefHeight="32.0" prefWidth="80.0" styleClass="login-btn" stylesheets="@logindesign.css" text="Login" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="124.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/user.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="close1" layoutX="255.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="41.0" styleClass="close" stylesheets="@logindesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Hyperlink fx:id="employee_hyperlink" layoutX="81.0" layoutY="419.0" onAction="#switchForm" stylesheets="@logindesign.css" text="Login Admin Account?">
+                     <font>
+                        <Font name="Tahoma Bold" size="13.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
